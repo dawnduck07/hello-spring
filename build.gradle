@@ -17,8 +17,30 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	runtimeOnly('org.springframework.boot:spring-boot-devtools')
+
+	/**
+	 * JUnit dependency 추가
+	 */
+	//testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
+	//testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
 }
 
+/**
+ * - JUnit5
+ * 	- JUnit 은 자바 프로그래밍용 단위 테스트를 할 수 있는 프레임워크다.
+ * 	- 프로그래밍에서 테스트 주도 개발 중요성이 부각된만큼 학습할 필요가 있다.
+ * 	- JUnit5는 버전과는 달리, JUnit5 = JUnit Platform + JUnit Jupiter + JUnit Vintage
+ * 	  와 같이 여러 개의 모듈로 구성되어 있다.
+ *
+ * - JUnit Platform
+ * 	- JUnit Platform 은 JVM 에서 테스트 프레임워크를 시작하기 위한 기반을 제공한다.
+ * 	- 또한, 플랫폼에서 실행되는 테스트 프레임 워크 개발을 위한 TestEngineAPI 를 정의한다.
+ * 	- IDEs(Intellij, Eclipse, VS Code), 빌드 도구(Gradle, Maven, Ant) 에서도 JUnit Platform 을 지원한다.
+ */
+
+/**
+ * 단위 테스트 플랫폼
+ */
 tasks.named('test') {
 	useJUnitPlatform()
 }
