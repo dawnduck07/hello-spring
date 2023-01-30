@@ -11,13 +11,11 @@ import java.util.Optional;
 /**
  * ctrl + shift + t : 해당 클래스의 서비스 클래스를 만들어 준다.
  */
-@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
     // 외부에서 memberRepository를 넣어준다.
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
